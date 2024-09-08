@@ -1,0 +1,154 @@
+@import "_variables";
+
+@font-face {
+	font-family: IRANSans;
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/IRANSansWeb.eot');
+	src: url('../fonts/IRANSansWeb.eot?#iefix') format('embedded-opentype'), 
+		 url('../fonts/IRANSansWeb.woff2') format('woff2'),
+		 url('../fonts/IRANSansWeb.woff') format('woff'),
+		 url('../fonts/IRANSansWeb.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: IRANSans-bold;
+	font-style: normal;
+	font-weight: bold;
+	src: url('../fonts/IRANSansWeb_Bold.eot');
+	src: url('../fonts/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'), 
+		 url('../fonts/IRANSansWeb_Bold.woff2') format('woff2'),
+		 url('../fonts/IRANSansWeb_Bold.woff') format('woff'),
+		 url('../fonts/IRANSansWeb_Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: IRANSans-num;
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/IRANSansWeb(FaNum).eot');
+	src: url('../fonts/IRANSansWeb(FaNum).eot?#iefix') format('embedded-opentype'), 
+		 url('../fonts/IRANSansWeb(FaNum).woff2') format('woff2'),
+		 url('../fonts/IRANSansWeb(FaNum).woff') format('woff'),
+		 url('../fonts/IRANSansWeb(FaNum).ttf') format('truetype');
+}
+
+@font-face {
+	font-family: IRANSans-num-b;
+	font-style: normal;
+	font-weight: bold;
+	src: url('../fonts/IRANSansWeb(FaNum)_Bold.eot');
+	src: url('../fonts/IRANSansWeb(FaNum)_Bold.eot?#iefix') format('embedded-opentype'), 
+		 url('../fonts/IRANSansWeb(FaNum)_Bold.woff2') format('woff2'),
+		 url('../fonts/IRANSansWeb(FaNum)_Bold.woff') format('woff'),
+		 url('../fonts/IRANSansWeb(FaNum)_Bold.ttf') format('truetype');
+}
+
+:root{
+    --primary-color: #{$primary-color};
+    --red-color: #{$red-color};
+    --green-color: #{$green-color};
+    --blue-color: #{$blue-color};
+    --orange-color: #{$orange-color};
+    --light-color: #{$light-color};
+    --white-color: #{$white-color};
+	--dark-color: #{$dark-color};
+    --black-color: #{$black-color};
+    --link-color: #{$link-color};
+    --link-hover-color: #{$link-hover-color};
+    --border-color: #{$border-color};
+	--border-color-light: #{$border-color-light};
+    --light-body-bg: #{$light-body-bg};
+    --dark-body-bg: #{$dark-body-bg};
+    --dark-card-color: #{$dark-card-color};
+    --border-radius-small: #{$border-radius-small};
+	--border-radius-medium: #{$border-radius-medium};
+    --border-radius-large: #{$border-radius-large};
+	--box-shadow-small: #{$box-shadow-small};
+	--box-shadow-medium: #{$box-shadow-medium};
+	--box-shadow-large: #{$box-shadow-large};
+    --sec-padding: #{$sec-padding};
+}
+
+* { 
+    box-sizing: border-box; 
+    padding: 0; 
+    margin: 0; 
+} 
+
+html, 
+body { 
+    max-width: 100vw; 
+    overflow-x: hidden; 
+    direction: rtl;
+} 
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 { 
+    font-family: "IRANSans-num-b", sans-serif; 
+    margin:0;
+    line-height: 2;
+}
+
+h1 { 
+    font-size: 1.8rem; 
+    font-weight: 600; 
+} 
+
+h2 { 
+    font-size: 1.75rem; 
+    font-weight: 600; 
+} 
+
+h3 { 
+    font-size: 1.5rem; 
+    font-weight: 600; 
+} 
+
+h4 { 
+    font-size: 1.4rem; 
+    font-weight: 600; 
+} 
+
+h5 { 
+    font-size: 1.25rem; 
+    font-weight: 600; 
+} 
+
+h6 {
+    font-size: 1.1rem; 
+    font-weight: 600; 
+}
+
+a { 
+    color: inherit; 
+    text-decoration: none; 
+}
+
+a:hover { 
+    color: var(--link-hover-color); 
+}
+
+ul, li {
+	list-style: none;
+}
+
+img {
+	width: 100%;
+}
+
+//========== CUSTOM DESIGN ==========
+
+body{
+    background: var(--light-body-color);
+    color: var(--dark-color);
+    font-family: IRANSans, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    direction: rtl;
+    text-align: right;
+}
