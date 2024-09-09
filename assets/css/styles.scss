@@ -1,5 +1,9 @@
 @import "_variables";
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Signika+Negative:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nova+Mono&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Signika+Negative:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nova+Mono&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Signika+Negative:wght@300..700&display=swap');
+
 @font-face {
 	font-family: IRANSans;
 	font-style: normal;
@@ -59,7 +63,6 @@
     --border-color: #{$border-color};
 	--border-color-light: #{$border-color-light};
     --light-body-bg: #{$light-body-bg};
-    --dark-body-bg: #{$dark-body-bg};
     --dark-card-color: #{$dark-card-color};
     --border-radius-small: #{$border-radius-small};
 	--border-radius-medium: #{$border-radius-medium};
@@ -68,7 +71,12 @@
 	--box-shadow-medium: #{$box-shadow-medium};
 	--box-shadow-large: #{$box-shadow-large};
     --sec-padding: #{$sec-padding};
+
+    //dark mode
+    --darkmode-bg-color: #{$darkmode-bg-color};
+    --darkmode-text-color: #{$darkmode-text-color};
 }
+
 
 * { 
     box-sizing: border-box; 
@@ -130,7 +138,7 @@ a {
 }
 
 a:hover { 
-    color: var(--link-hover-color); 
+    color: var(--darkmode-text-color); 
 }
 
 ul, li {
@@ -141,14 +149,152 @@ img {
 	width: 100%;
 }
 
+.loga-transition{
+    transition: all 0.3s ease-in-out;
+}
+
 //========== CUSTOM DESIGN ==========
 
+
+//dark mode
 body{
-    background: var(--light-body-color);
-    color: var(--dark-color);
+    background-color: var(--darkmode-bg-color);
+    color: var(--darkmode-text-color);
     font-family: IRANSans, sans-serif;
     font-size: 14px;
     line-height: 1.5;
     direction: rtl;
     text-align: right;
+}
+
+.header{
+    width: 100%;
+    position: fixed;
+    top: 2rem;
+    display: flex;
+    justify-content: center;
+    z-index: 9999;
+    .navbar{
+        background: rgba(218, 197, 167, .05);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        border: 1px solid rgba(218, 197, 167, .15);
+        .navbar-brand{
+            font-family: "Gamja Flower", sans-serif;
+            font-weight: 500;
+            color: var(--darkmode-text-color);
+            padding: 0;
+            font-size: 1.85rem;
+        }
+    }
+    .navbar-nav{
+        .nav-link{
+            position: relative;
+            color: var(--darkmode-text-color);
+            padding: 2px;
+            margin: 0 5px;
+            &active{
+                color: var(--darkmode-text-color);
+            }
+            &:after {
+                background: none repeat scroll 0 0 transparent;
+                bottom: 0;
+                content: "";
+                display: block;
+                height: 1px;
+                left: 0;
+                position: absolute;
+                background: var(--darkmode-text-color);
+                transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                width: 0;
+            }
+            &:hover:after {
+                width: 100%; 
+              }
+        }
+    }
+}
+.header {
+    .navbar-nav{
+        align-items: center;
+        .nav-link.loga-btn{
+            background-color: var(--darkmode-text-color);
+            color: var(--darkmode-bg-color);
+            padding: .5rem 1rem;
+            border-radius: 2px;
+        }
+    }
+}
+
+
+.loga-bg{
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.hero-banner{
+    height: 150vh;
+    width: 100%;
+    .loga-bg{
+        background-image: url('../img/hero-bg.jpeg')
+    }
+}
+.hero-content-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+    .hero-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        text-align: center;
+        h1{
+            direction: ltr;
+            font-size: 6rem;
+            line-height: 1;
+            text-align: center;
+            font-family: "Playfair Display", serif;
+            letter-spacing: 5px;
+            margin-bottom: 2rem;
+        }
+        p{
+            font-size: 1.25rem;
+            width: 70%;
+            margin-bottom: 4rem;
+            font-family: "Nova Mono", monospace;
+        }
+        .slide-down{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            i{
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 1rem;
+                border-radius: 50%;
+                background: rgba(218, 197, 167, .05);
+                border: 1px solid rgba(218, 197, 167, .15);
+            }
+            &:hover{
+                i{
+                    background: rgba(218, 197, 167, .15);
+                    border: 1px solid rgba(218, 197, 167, .25)
+                }
+            }
+        }
+    }
+}
+
+.strong-tiṯle{
+    font-size: 2.5rem
 }
