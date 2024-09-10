@@ -13,6 +13,7 @@ $link-hover-color: darken($link-color, 15%);
 $border-color-light: #f2f2f2;
 
 $body-font-size: 16px;
+$medium-title-font-size: 4rem;
 //dark mode colors
 
 $darkmode-bg-color: #0E0E0E;//dark mode body background color
@@ -30,7 +31,7 @@ $box-shadow-small: 0 0 10px rgba(0, 0, 0, 0.1);
 $box-shadow-medium: 0 0 20px rgba(0, 0, 0, 0.1);
 $box-shadow-large: 0 0 30px rgba(0, 0, 0, 0.1);
 
-$sec-padding: 5rem 48px;
+$sec-padding: 5rem 48px 0;
 
 //light mode colors
 
