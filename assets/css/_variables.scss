@@ -12,12 +12,16 @@ $link-color: #1C39BB;
 $link-hover-color: darken($link-color, 15%);
 $border-color-light: #f2f2f2;
 
+$body-font-size: 16px;
 //dark mode colors
 
 $darkmode-bg-color: #0E0E0E;//dark mode body background color
 $darkmode-text-color: #dac5a7;//dark mode text color
 $dark-card-color: #0D0C12;
+$darkmode-bg-card: rgba(218, 197, 167, .05);
 
+$darkmode-border-color-card: rgba(218, 197, 167, .15);
+$darkmode-border-radius-card: 2px;
 $border-radius-small: 5px;
 $border-radius-medium: 10px;
 $border-radius-large: 15px;
@@ -26,7 +30,7 @@ $box-shadow-small: 0 0 10px rgba(0, 0, 0, 0.1);
 $box-shadow-medium: 0 0 20px rgba(0, 0, 0, 0.1);
 $box-shadow-large: 0 0 30px rgba(0, 0, 0, 0.1);
 
-$sec-padding: 5rem 0;
+$sec-padding: 5rem 48px;
 
 //light mode colors
 
