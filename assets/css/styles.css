@@ -374,4 +374,205 @@ body {
   margin: 0;
 }
 
+.process {
+  padding: var(--sec-padding);
+}
+.process .process-timeline {
+  padding: var(--sec-padding);
+}
+
+.process-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.process-wrapper .process-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  text-align: center;
+}
+.process-wrapper .process-header h1 {
+  direction: ltr;
+  font-size: 6rem;
+  line-height: 1;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 5px;
+  margin-bottom: 2rem;
+}
+.process-wrapper .process-header .description p {
+  font-size: 1.25rem;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 4rem;
+  font-family: "Nova Mono", monospace;
+}
+
+.timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+}
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 1px;
+  background-color: rgba(218, 197, 167, 0.15);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.timeline li {
+  margin-bottom: 25px;
+  position: relative;
+}
+.timeline li:before {
+  content: " ";
+  display: table;
+}
+.timeline li:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.timeline .timeline-panel {
+  width: 46%;
+  float: left;
+  position: relative;
+}
+
+.timeline .timeline-inverted .timeline-panel {
+  float: right;
+}
+
+/** timeline circle icons **/
+.timeline .tl-circ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  background: #0e0e0e;
+  z-index: 99999;
+}
+.timeline .tl-circ span {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(218, 197, 167, 0.05);
+  border: 1px solid rgba(218, 197, 167, 0.15);
+}
+
+.timeline .tl-circ.top-circ {
+  top: -30px;
+}
+
+/** media queries **/
+@media (max-width: 991px) {
+  .timeline .timeline-panel {
+    width: 44%;
+  }
+}
+@media (max-width: 700px) {
+  ul.timeline:before {
+    left: 40px;
+  }
+  ul.timeline .timeline-panel {
+    width: calc(100% - 90px);
+    width: -moz-calc(100% - 90px);
+    width: -webkit-calc(100% - 90px);
+  }
+  ul.timeline .tl-circ {
+    top: 22px;
+    left: 22px;
+    margin-left: 0;
+  }
+  ul.timeline .timeline-panel {
+    float: right;
+  }
+  ul.timeline .timeline-panel:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+  }
+  ul.timeline .timeline-panel:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
+  }
+}
+.faq {
+  padding: var(--sec-padding);
+}
+
+.faq-wrapper {
+  display: flex;
+  gap: 32px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.faq-accordion-wrapper {
+  width: 50%;
+}
+
+.logato-accordion .accordion-item.loga-card {
+  padding: 0;
+  margin-bottom: 1rem;
+}
+.logato-accordion .accordion-item.loga-card .accordion-button {
+  display: flex;
+  width: 100%;
+  position: relative;
+  padding: 2rem;
+}
+.logato-accordion .accordion-item.loga-card .accordion-button span {
+  width: 85%;
+}
+.logato-accordion .accordion-item.loga-card .accordion-button .accordion-icon {
+  position: absolute;
+  left: 4%;
+}
+.logato-accordion .accordion-item.loga-card .accordion-button .accordion-icon i {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 300;
+  color: var(--darkmode-text-color);
+  background: rgba(218, 197, 167, 0.05);
+  border: 1px solid rgba(218, 197, 167, 0.15);
+  transition: all 0.5s ease-in-out;
+}
+.logato-accordion .accordion-item.loga-card .accordion-body {
+  padding: 0 2rem;
+}
+
+.accordion-item.loga-card .accordion-button[aria-expanded=true] .accordion-icon i {
+  transform: rotate(135deg);
+}
+
+.footer {
+  padding: var(--sec-padding);
+}
+
 /*# sourceMappingURL=styles.css.map */
