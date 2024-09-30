@@ -153,13 +153,10 @@ body {
   background-color: var(--darkmode-bg-card);
   border: 1px solid var(--darkmode-border-color-card);
   border-radius: var(--darkmode-border-radius-card);
-  text-align: left;
 }
 .loga-card p {
   line-height: 160%;
   font-size: var(--body-font-size);
-  direction: ltr;
-  font-family: "Nova Mono", monospace;
 }
 
 .loga-links {
@@ -281,7 +278,6 @@ body {
   text-align: center;
 }
 .hero-content-wrapper .hero-content h1 {
-  direction: ltr;
   font-size: 6rem;
   line-height: 1;
   text-align: center;
@@ -293,7 +289,6 @@ body {
   font-size: 1.25rem;
   width: 70%;
   margin-bottom: 4rem;
-  font-family: "Nova Mono", monospace;
 }
 
 .strong-tiṯle {
@@ -397,7 +392,6 @@ body {
   text-align: center;
 }
 .process-wrapper .process-header h1 {
-  direction: ltr;
   font-size: 6rem;
   line-height: 1;
   text-align: center;
@@ -410,7 +404,6 @@ body {
   width: 70%;
   margin: auto;
   margin-bottom: 4rem;
-  font-family: "Nova Mono", monospace;
 }
 
 .timeline {
@@ -446,6 +439,15 @@ body {
   width: 46%;
   float: left;
   position: relative;
+}
+.timeline .timeline-panel .subtitle {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+.timeline .timeline-panel .title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 .timeline .timeline-inverted .timeline-panel {
@@ -523,14 +525,24 @@ body {
 }
 
 .faq-wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 32px;
   justify-content: space-between;
   align-items: flex-start;
 }
-
-.faq-accordion-wrapper {
-  width: 50%;
+.faq-wrapper .faq-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.faq-wrapper .faq-title h3 {
+  font-size: 2rem;
+}
+.faq-wrapper .faq-title p {
+  font-size: 1.2rem;
+  text-align: justify;
 }
 
 .logato-accordion .accordion-item.loga-card {
@@ -542,6 +554,7 @@ body {
   width: 100%;
   position: relative;
   padding: 2rem;
+  text-align: right;
 }
 .logato-accordion .accordion-item.loga-card .accordion-button span {
   width: 85%;
@@ -565,6 +578,7 @@ body {
 }
 .logato-accordion .accordion-item.loga-card .accordion-body {
   padding: 0 2rem;
+  margin-bottom: 1rem;
 }
 
 .accordion-item.loga-card .accordion-button[aria-expanded=true] .accordion-icon i {
@@ -573,6 +587,37 @@ body {
 
 .footer {
   padding: var(--sec-padding);
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.footer-wrapper .footer-logo-social .footer-logo a {
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  font-family: "Gamja Flower", sans-serif;
+}
+.footer-wrapper .footer-logo-social .footer-social {
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer-wrapper .footer-logo-social .footer-social a {
+  font-size: 3rem;
+}
+
+.logato-copyright {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--darkmode-border-color-card);
+  margin-top: 2rem;
+}
+.logato-copyright p {
+  margin: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
